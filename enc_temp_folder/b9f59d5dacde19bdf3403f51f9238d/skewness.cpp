@@ -1,7 +1,6 @@
-#include "descriptive_statistics.h"
 #include <iostream>
 #include <math.h>
-
+#include "descriptive_statistics.h"
 using namespace std;
 
 long mean(int* ptr, int length)
