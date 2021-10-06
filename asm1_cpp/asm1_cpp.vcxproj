@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="median.cpp" />
+    <ClCompile Include="mode.cpp" />
     <ClCompile Include="quick_sort.cpp" />
   </ItemGroup>
   <ItemGroup>

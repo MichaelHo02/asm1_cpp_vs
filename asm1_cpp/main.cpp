@@ -15,6 +15,7 @@ int main(int argc, char* argv[]) {
     if (argc > 2 || argc == 1) {
         cerr << "Invalid argument" << endl;
         cerr << "Enter with the following format: ./main <file_name.csv>" << endl;
+        return -1;
     }
 
     int array_size = 0, current = 0;
@@ -75,12 +76,15 @@ int main(int argc, char* argv[]) {
     cout << "median_x = " << median(x_arr, array_size);
     cout << " - median_y = " << median(y_arr, array_size) << endl;
 
+    // test
+    mode(x_arr, array_size);
+
     return 0;
 }
 
 void split_str(string* line, string* x, string* y, char delim) {
     size_t pos = 0;
-    while ((pos = line->find(delim)) == string::npos) {}
+    pos = line->find(delim);
     *x = line->substr(0, pos);
     line->erase(0, pos + strlen(&delim));
     *y = *line;
