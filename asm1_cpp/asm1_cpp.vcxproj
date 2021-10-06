@@ -22,6 +22,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="median.cpp" />
     <ClCompile Include="quick_sort.cpp" />
+    <ClCompile Include="skewness.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data1.csv" />
