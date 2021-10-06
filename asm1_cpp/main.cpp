@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
 
     string filename = argv[argc - 1];
 
-    ifstream input_file("data1.csv");
+    ifstream input_file(argv[argc - 1]);
 
     if (!input_file.is_open()) {
         cerr << "Cannot open the file" << endl;
