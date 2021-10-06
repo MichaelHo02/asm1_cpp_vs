@@ -47,8 +47,6 @@ int main(int argc, char* argv[]) {
         if (!line.empty()) {
             // todo: move the func to a different files
             split_str(&line, &x, &y, ',');
-            // Testing
-            cout << x << " and " << y << endl;
             // todo: move the func to a different files
             if (!isdigit(x) || !isdigit(y)) {
                 x.clear();
@@ -75,7 +73,7 @@ int main(int argc, char* argv[]) {
 
     // Calculate the median
     cout << "median_x = " << median(x_arr, array_size);
-    cout << " - median_y =" << median(x_arr, array_size) << endl;
+    cout << " - median_y = " << median(y_arr, array_size) << endl;
 
     return 0;
 }
