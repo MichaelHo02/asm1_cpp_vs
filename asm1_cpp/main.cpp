@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "descriptive_statistics.h"
 
 
 using namespace std;
@@ -38,8 +39,8 @@ int main(int argc, char* argv[]) {
     input_file.clear();
     input_file.seekg(0);
 
-    auto* x_arr = new long double[array_size];
-    auto* y_arr = new long double[array_size];
+    auto* x_arr = new int[array_size];
+    auto* y_arr = new int[array_size];
 
     while (!input_file.eof()) {
         getline(input_file, line);
@@ -57,8 +58,8 @@ int main(int argc, char* argv[]) {
             }
 
             if (current < array_size) {
-                x_arr[current] = stold(x);
-                y_arr[current] = stold(y);
+                x_arr[current] = stoi(x);
+                y_arr[current] = stoi(y);
             }
 
             x.clear();
@@ -71,6 +72,10 @@ int main(int argc, char* argv[]) {
     input_file.close();
 
     //todo: calculate all the function
+
+    // Calculate the median
+    cout << "median_x = " << median(x_arr, array_size);
+    cout << " - median_y =" << median(x_arr, array_size) << endl;
 
     return 0;
 }

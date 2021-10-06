@@ -20,10 +20,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="median.cpp" />
+    <ClCompile Include="quick_sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data1.csv" />
     <None Include="data2.csv" />
+    <None Include="test.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="descriptive_statistics.h" />
+    <ClInclude Include="sort.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
