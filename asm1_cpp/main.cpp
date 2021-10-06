@@ -74,6 +74,7 @@ int main(int argc, char* argv[]) {
     // Calculate the median
     cout << "median_x = " << median(x_arr, array_size);
     cout << " - median_y = " << median(y_arr, array_size) << endl;
+    cout << "skew_x= " << skewness(x_arr, array_size) << " - "<<"skew_y= " << skewness(y_arr, array_size);
 
     return 0;
 }
