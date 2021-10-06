@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include "skewness.h"
+#include "descriptive_statistic.h"
 using namespace std;
 
 long mean (int *ptr, int length)
