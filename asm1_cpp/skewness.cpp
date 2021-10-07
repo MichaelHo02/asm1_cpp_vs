@@ -28,7 +28,7 @@ long double variance(int* ptr, int length)
 long double deviation(int* ptr, int length)
 {
     long double answer = sqrt(variance( ptr,length));
-    return ;
+    return answer ;
 }
 
 long double skewness(int* ptr, int length)
