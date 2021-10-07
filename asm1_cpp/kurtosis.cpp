@@ -3,7 +3,6 @@
 #include <math.h>
 
 using namespace std;
-
 long double mean(int* ptr, int length)
 {
     long double answer = 0;
@@ -27,28 +26,16 @@ long double variance(int* ptr, int length)
 
 long double deviation(int* ptr, int length)
 {
-    long double answer = sqrt(variance( ptr,length));
-    return ;
+    long double answer = sqrt(variance(ptr, length));
+    return;
 }
-
-long double skewness(int* ptr, int length)
-{
-    long double answer = 0;
-    for (int i = 0; i < length; i++)
-    {
-
-        answer += pow((*(ptr + i) - mean(ptr, length)) / deviation(ptr, length), 3);
-    }
-    return answer / length;
-}
-
 long double kurtosis(int* ptr, int length)
 {
     long double answer = 0;
 
     for (int i = 0; i < length; i++)
     {
-        answer += pow((*(ptr + i) - mean(ptr, length)) /deviation(ptr, length), 4);
+        answer += pow((*(ptr + i) - mean(ptr, length)) / deviation(ptr, length), 4);
     }
     answer = (answer / length) - 3;
     return answer;
