@@ -21,9 +21,7 @@ int main(int argc, char* argv[]) {
     int array_size = 0, current = 0;
     string line, x, y;
 
-    string filename = argv[argc - 1];
-
-    ifstream input_file(argv[argc - 1]);
+    ifstream input_file(argv[argc - 1], ifstream::in);
 
     if (!input_file.is_open()) {
         cerr << "Cannot open the file" << endl;
@@ -76,13 +74,16 @@ int main(int argc, char* argv[]) {
     //    cout << x_arr[i] << " " << y_arr[i] << endl;
     //}
 
-    //// Calculate the median
+    // Calculate the median
     cout << "median_x = " << median(x_arr, array_size);
     cout << " - median_y = " << median(y_arr, array_size) << endl;
+    cout << "mode_x = { "; mode(x_arr, array_size); cout << "}";
+    cout << " - mode_y = { "; mode(y_arr, array_size); cout << "}\n";
+
     //cout << "skew_x= " << skewness(x_arr, array_size) <<" - skew_y= " << skewness(y_arr, array_size);
 
-    //// test
-    //mode(x_arr, array_size);
+    delete[] x_arr;
+    delete[] y_arr;
 
     return 0;
 }
