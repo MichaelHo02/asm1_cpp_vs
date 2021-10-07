@@ -30,6 +30,9 @@
     <ClCompile Include="skewness.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kurtosis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="data1.csv">
