@@ -1,4 +1,5 @@
 #pragma once
-long  double median(int* arr, int size);
-long double skewness(int* ptr, int length);
+long median(int* arr, int size);
+long skewness(int* ptr, int length);
 void mode(int* arr, int size);
+long variance(int* arr, int size);
