@@ -41,15 +41,3 @@ long double skewness(int* ptr, int length)
     }
     return answer / length;
 }
-
-long double kurtosis(int* ptr, int length)
-{
-    long double answer = 0;
-
-    for (int i = 0; i < length; i++)
-    {
-        answer += pow((*(ptr + i) - mean(ptr, length)) /deviation(ptr, length), 4);
-    }
-    answer = (answer / length) - 3;
-    return answer;
-}
