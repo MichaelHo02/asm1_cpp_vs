@@ -4,36 +4,45 @@
 
 using namespace std;
 
-long mean(int* ptr, int length)
+long double mean(int* ptr, int length)
 {
-    long answer = 0;
+    long double answer = 0;
     for (int i = 0; i < length; i++)
     {
-        answer += (*(ptr + i));
+        answer += *(ptr + i);
     }
-    return answer / (length);
-
+    answer /= length;
+    return answer;
 }
-
-long variance_dev(int* ptr, int length)
+long double variance_dev(int* ptr, int length)
 {
-    long answer = 0;
+    long double answer = 0;
     for (int i = 0; i < length; i++)
     {
         answer += pow(*(ptr + i) - mean(ptr, length), 2);
     }
-    return answer / (length - 1);
-
+    answer = answer / ((float)length - 1.0f);
+    return answer;
 }
-long skewness(int* ptr, int length)
+long double skewness(int* ptr, int length)
 {
-    long answer = 0;
+    long double answer = 0;
     for (int i = 0; i < length; i++)
     {
 
-        answer += pow((*(ptr + i)) - mean(ptr, length) / sqrt(variance_dev(ptr, length)), 3);
+        answer += pow((*(ptr + i) - mean(ptr, length)) / sqrt(variance_dev(ptr, length)), 3);
     }
     return answer / length;
 }
 
+long double kurtosis(int* ptr, int length)
+{
+    long double answer = 0;
 
+    for (int i = 0; i < length; i++)
+    {
+        answer += pow((*(ptr + i) - mean(ptr, length)) / sqrt(variance_dev(ptr, length)), 4);
+    }
+    answer = (answer / length) - 3;
+    return answer;
+}
