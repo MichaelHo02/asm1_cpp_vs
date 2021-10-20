@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="inferential_statistics.cpp" />
     <ClCompile Include="kurtosis.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="median.cpp" />
@@ -33,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="descriptive_statistics.h" />
+    <ClInclude Include="inferential_statistics.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

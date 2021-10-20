@@ -4,7 +4,7 @@
 
 using namespace std;
 
-long double mean(int* ptr, int length)
+long double mean1(int* ptr, int length)
 {
     long double answer = 0;
     for (int i = 0; i < length; i++)
@@ -14,20 +14,20 @@ long double mean(int* ptr, int length)
     answer /= length;
     return answer;
 }
-long double variance(int* ptr, int length)
+long double variance1(int* ptr, int length)
 {
     long double answer = 0;
     for (int i = 0; i < length; i++)
     {
-        answer += pow(*(ptr + i) - mean(ptr, length), 2);
+        answer += pow(*(ptr + i) - mean1(ptr, length), 2);
     }
     answer = answer / ((float)length - 1.0f);
     return answer;
 }
 
-long double deviation(int* ptr, int length)
+long double deviation1(int* ptr, int length)
 {
-    long double answer = sqrt(variance( ptr,length));
+    long double answer = sqrt(variance1( ptr,length));
     return answer ;
 }
 
@@ -37,7 +37,7 @@ long double skewness(int* ptr, int length)
     for (int i = 0; i < length; i++)
     {
 
-        answer += pow((*(ptr + i) - mean(ptr, length)) / deviation(ptr, length), 3);
+        answer += pow((*(ptr + i) - mean1(ptr, length)) / deviation1(ptr, length), 3);
     }
     return answer / length;
 }

@@ -33,6 +33,9 @@
     <ClCompile Include="kurtosis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="inferential_statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="data1.csv">
@@ -50,6 +53,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inferential_statistics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

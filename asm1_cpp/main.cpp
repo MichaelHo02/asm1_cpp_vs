@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include "descriptive_statistics.h"
+#include "inferential_statistics.h"
 
 
 using namespace std;
@@ -78,6 +79,10 @@ int main(int argc, char* argv[]) {
     cout << "median_x = " << median(x_arr, array_size);
     cout << " - median_y = " << median(y_arr, array_size) << endl;
     //cout << "skew_x= " << skewness(x_arr, array_size) <<" - skew_y= " << skewness(y_arr, array_size);
+
+    // Debugging for inferential statistics
+    cout << "number of rows: " << array_size << endl;
+    cout << "cov(x_y) = " << CalculateCovariance(x_arr, y_arr, array_size) << endl; // SAMPLE, not POPULATION
 
     delete[] x_arr;
     delete[] y_arr;
