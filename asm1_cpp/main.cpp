@@ -71,9 +71,9 @@ int main(int argc, char* argv[]) {
 
     //todo: calculate all the function
 
-    //for (int i = 0; i < array_size; ++i) {
-    //    cout << x_arr[i] << " " << y_arr[i] << endl;
-    //}
+    for (int i = 0; i < array_size; ++i) {
+        cout << x_arr[i] << " " << y_arr[i] << endl;
+    }
 
     // Calculate the median
     cout << "median_x = " << median(x_arr, array_size);
@@ -82,6 +82,7 @@ int main(int argc, char* argv[]) {
 
     // Debugging for inferential statistics
     cout << "number of rows: " << array_size << endl;
+    //cout << x_arr << endl;
     cout << "cov(x_y) = " << CalculateCovariance(x_arr, y_arr, array_size) << endl; // SAMPLE, not POPULATION
 
     delete[] x_arr;

@@ -10,27 +10,28 @@
 using namespace std;
 
 // Function to find mean.
-float CalculateMean(int arr[], int n)
+float CalculateMean(int arr[], int array_size)
 {
 	float sum = 0;
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < array_size; i++) {
 		sum = sum + arr[i];
 	}
 
-	return sum / n;
+	return sum / array_size;
 }
 
 // Function to find covariance.
-float CalculateCovariance(int x_arr[], int y_arr[], int n)
+float CalculateCovariance(int* x_arr, int* y_arr, int array_size)
 {
 	float sum = 0;
 
-	for (int i = 0; i < n; i++) {
-		sum = sum + (x_arr[i] - CalculateMean(x_arr, n)) * (y_arr[i] - CalculateMean(y_arr, n));
+	for (int i = 0; i < array_size; ++i) {
+		cout << x_arr[i] << " " << y_arr[i] << endl; // Prints wrong numbers. The problem is probably here.
+		sum = sum + (x_arr[i] - CalculateMean(x_arr, array_size)) * (y_arr[i] - CalculateMean(y_arr, array_size));
 	}
 
-	return sum / (n - 1);
+	return sum / (array_size - 1);
 }
 
 //long double CalculatePearson(int x[], int y[], int arr_size)
