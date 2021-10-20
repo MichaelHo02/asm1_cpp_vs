@@ -71,10 +71,12 @@ int main(int argc, char* argv[]) {
 
     //todo: calculate all the function
 
+    cout << "\noriginal numbers: " << endl;
     for (int i = 0; i < array_size; ++i) {
         cout << x_arr[i] << " " << y_arr[i] << endl;
     }
 
+    cout << endl;
     // Calculate the median
     cout << "median_x = " << median(x_arr, array_size);
     cout << " - median_y = " << median(y_arr, array_size) << endl;
@@ -83,7 +85,7 @@ int main(int argc, char* argv[]) {
     // Debugging for inferential statistics
     cout << "number of rows: " << array_size << endl;
     //cout << x_arr << endl;
-    cout << "cov(x_y) = " << CalculateCovariance(x_arr, y_arr, array_size) << endl; // SAMPLE, not POPULATION
+    cout << "\ncov(x_y) = " << CalculateCovariance(x_arr, y_arr, array_size) << endl; // SAMPLE, not POPULATION
 
     delete[] x_arr;
     delete[] y_arr;

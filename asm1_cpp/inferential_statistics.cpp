@@ -26,8 +26,9 @@ float CalculateCovariance(int* x_arr, int* y_arr, int array_size)
 {
 	float sum = 0;
 
+	cout << "\nnumbers inside CalculateVariance(): " << endl;
 	for (int i = 0; i < array_size; ++i) {
-		cout << x_arr[i] << " " << y_arr[i] << endl; // Prints wrong numbers. The problem is probably here.
+		cout << x_arr[i] << " " << y_arr[i] << endl; // Prints wrong numbers. The problem is probably in the way the pointers are passed.
 		sum = sum + (x_arr[i] - CalculateMean(x_arr, array_size)) * (y_arr[i] - CalculateMean(y_arr, array_size));
 	}
 
